@@ -1,7 +1,7 @@
 About
 -----
 
-Jewnicorn 'Green Unicorn - Jewish Edition' is a Python WSGI HTTP Server for UNIX. It's a pre-fork
+Jewnicorn 'Jewish Unicorn' is a Python WSGI HTTP Server for UNIX. It's a pre-fork
 worker model ported from Ruby's Unicorn_ project. The Jewnicorn server is broadly
 compatible with various web frameworks, simply implemented, light on server
 resource usage, and fairly speedy. It also doesn't work on Shabbos.
