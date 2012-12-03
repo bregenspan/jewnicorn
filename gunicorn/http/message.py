@@ -3,6 +3,7 @@
 # This file is part of gunicorn released under the MIT license.
 # See the NOTICE for more information.
 
+from datetime import datetime
 import re
 import socket
 from errno import ENOTCONN
@@ -11,9 +12,10 @@ from gunicorn.http.unreader import SocketUnreader
 from gunicorn.http.body import ChunkedReader, LengthReader, EOFReader, Body
 from gunicorn.http.errors import InvalidHeader, InvalidHeaderName, NoMoreData, \
 InvalidRequestLine, InvalidRequestMethod, InvalidHTTPVersion, \
-LimitRequestLine, LimitRequestHeaders
+LimitRequestLine, LimitRequestHeaders, UnkosherRequest
 from gunicorn.http.errors import InvalidProxyLine, ForbiddenProxyRequest
 from gunicorn.six import BytesIO, urlsplit, bytes_to_str
+from gunicorn.util import SHABBOS, weekdayname
 
 MAX_REQUEST_LINE = 8190
 MAX_HEADERS = 32768
@@ -160,6 +162,11 @@ class Request(Message):
         buf.write(data)
 
     def parse(self, unreader):
+
+        day_today = weekdayname[datetime.today().weekday()]
+        if day_today == SHABBOS:
+            raise UnkosherRequest("I don't work on Shabbos!")
+
         buf = BytesIO()
         self.get_data(unreader, buf, stop=True)
 

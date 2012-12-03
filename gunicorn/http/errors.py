@@ -97,3 +97,12 @@ class ForbiddenProxyRequest(ParseException):
 
     def __str__(self):
         return "Proxy request from %s not allowed" % self.host
+
+
+class UnkosherRequest(ParseException):
+    def __init__(self, reason):
+        self.reason = reason
+        self.code = 403
+
+    def __str__(self):
+        return "Request is Unkosher: " % self.reason

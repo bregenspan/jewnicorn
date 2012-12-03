@@ -1,10 +1,10 @@
 About
 -----
 
-Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX. It's a pre-fork
-worker model ported from Ruby's Unicorn_ project. The Gunicorn server is broadly
+Jewnicorn 'Green Unicorn - Jewish Edition' is a Python WSGI HTTP Server for UNIX. It's a pre-fork
+worker model ported from Ruby's Unicorn_ project. The Jewnicorn server is broadly
 compatible with various web frameworks, simply implemented, light on server
-resource usage, and fairly speedy.
+resource usage, and fairly speedy. It also doesn't work on Shabbos.
 
 Feel free to join us in `#gunicorn`_ on freenode_.
 

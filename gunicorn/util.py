@@ -44,6 +44,10 @@ monthname = [None,
              'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
              'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
+# This is an extremely naive definition of Shabbos
+#   (TODO: use local sundown)
+SHABBOS = 'Sat'
+
 # Server and Date aren't technically hop-by-hop
 # headers, but they are in the purview of the
 # origin server which the WSGI spec says we should
