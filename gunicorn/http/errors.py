@@ -105,4 +105,4 @@ class UnkosherRequest(ParseException):
         self.code = 403
 
     def __str__(self):
-        return "Request is Unkosher: " % self.reason
+        return "Request is Unkosher: %s" % self.reason
