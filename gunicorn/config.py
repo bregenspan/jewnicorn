@@ -1055,3 +1055,16 @@ class ProxyAllowFrom(Setting):
     desc = """\
         Front-end's IPs from which allowed accept proxy requests (comma separate).
         """
+
+class City(Setting):
+    name = "city"
+    section = "Server Mechanics"
+    cli = ["--city"]
+    validator = validate_string
+    default = "New York"
+    desc = """\
+        Name of nearby city to use for sun-up/sun-down calculations.
+
+        Must be in list of cities contained in
+        http://packages.python.org/astral/#astral-v0-6-2
+        """

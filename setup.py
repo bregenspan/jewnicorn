@@ -82,6 +82,11 @@ setup(
     tests_require = tests_require,
     cmdclass = {'test': PyTest},
 
+    install_requires=[
+        'astral==0.6.2',
+        'pytz==2012h'
+    ],
+
     entry_points="""
 
     [console_scripts]

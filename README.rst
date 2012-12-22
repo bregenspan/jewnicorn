@@ -53,6 +53,10 @@ that can be used for serving the various supported web frameworks: ``gunicorn``,
 Commonly Used Arguments
 +++++++++++++++++++++++
 
+  * ``--city=CITY`` - Specify the name of your city, or nearest population center.
+    It is important that this be set in order to correctly determine whether it
+    currently is or is not Shabbos. City must be one of those listed at
+    http://packages.python.org/astral/#cities
   * ``-c CONFIG, --config=CONFIG`` - Specify the path to a `config file`_
   * ``-b BIND, --bind=BIND`` - Specify a server socket to bind. Server sockets
     can be any of ``$(HOST)``, ``$(HOST):$(PORT)``, or ``unix:$(PATH)``.
